@@ -19,6 +19,13 @@
 		<ul class="nav navbar-nav">
 			{{#if currentUser}}<li><a href="{{pathFor 'videoSubmit'}}">Submit Lesson</a></li>
 			{{/if}}
+			{{#if currentUser}}<li>
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+				Settings
+			</button></li>
+			{{> settings}}
+			{{/if}}
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			{{> loginButtons}}

@@ -1,4 +1,5 @@
 Template.header.events({
+	//userSearch is the query string
 	'keyup form input': _.debounce(function(event, template) {
 		  event.preventDefault();
 		  Session.set('userSearch', template.find('form input').value);
