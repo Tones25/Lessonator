@@ -1,0 +1,568 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"user",
+				"userId"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/tony/lessonator/server/publications.js",
+			"settings":
+			{
+				"buffer_size": 1024,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tony/lessonator/client/templates/includes/header.html",
+			"settings":
+			{
+				"buffer_size": 1210,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tony/lessonator/client/templates/applications/settings.html",
+			"settings":
+			{
+				"buffer_size": 1684,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tony/lessonator/client/templates/videos/video_page.html",
+			"settings":
+			{
+				"buffer_size": 399,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tony/lessonator/client/templates/videos/video_Item.html",
+			"settings":
+			{
+				"buffer_size": 413,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tony/lessonator/client/templates/includes/header.js",
+			"settings":
+			{
+				"buffer_size": 423,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add All"
+			],
+			[
+				"git: c",
+				"Git: Commit"
+			],
+			[
+				"git: a",
+				"Git: Add All"
+			],
+			[
+				"term",
+				"Terminal: Open"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/tony/lessonator",
+		"/Users/tony/lessonator/client",
+		"/Users/tony/lessonator/client/templates",
+		"/Users/tony/lessonator/client/templates/applications",
+		"/Users/tony/lessonator/client/templates/includes",
+		"/Users/tony/lessonator/client/templates/videos",
+		"/Users/tony/lessonator/lib",
+		"/Users/tony/lessonator/lib/collections",
+		"/Users/tony/lessonator/server"
+	],
+	"file_history":
+	[
+		"/Users/tony/lessonator/client/templates/videos/player.js",
+		"/Users/tony/lessonator/client/templates/videos/video_list.js",
+		"/Users/tony/lessonator/client/templates/videos/video_Item.html",
+		"/Users/tony/lessonator/client/templates/videos/video_page.html",
+		"/Users/tony/lessonator/client/templates/videos/video_list.html",
+		"/Users/tony/lessonator/server/fixtures.js",
+		"/Users/tony/lessonator/client/templates/includes/header.js",
+		"/Users/tony/lessonator/client/templates/applications/not_found.html",
+		"/Users/tony/NetBeansProjects/lessonator/sql/create-db.sql",
+		"/Users/tony/lessonator/.meteor/packages",
+		"/Users/tony/lessonator/client/templates/videos/player.html",
+		"/Users/tony/lessonator/client/templates/videos/video_page.js",
+		"/Users/tony/lessonator/lib/router.js",
+		"/Users/tony/Documents/microscope/client/templates/posts/posts_list.html",
+		"/Users/tony/Documents/microscope/client/templates/posts/post_submit.html",
+		"/Users/tony/Documents/microscope/client/templates/posts/post_edit.js",
+		"/Users/tony/lessonator/lib/permissions.js",
+		"/Users/tony/Documents/microscope/lib/permissions.js",
+		"/Users/tony/Documents/microscope/client/helpers/errors.js",
+		"/Users/tony/Documents/microscope/client/templates/applications/layout.html",
+		"/Users/tony/Documents/microscope/client/templates/includes/errors.html",
+		"/Users/tony/Documents/microscope/client/templates/includes/errors.js",
+		"/Users/tony/Documents/microscope/client/templates/posts/post_submit.js",
+		"/Users/tony/Documents/microscope/lib/collections/posts.js",
+		"/Users/tony/Documents/microscope/client/templates/posts/posts_list.js",
+		"/Users/tony/Documents/microscope/lib/router.js",
+		"/Users/tony/Documents/microscope/client/templates/posts/post_edit.html",
+		"/Users/tony/Documents/microscope/client/templates/posts/post_item.html",
+		"/Users/tony/Documents/microscope/client/templates/posts/post_item.js",
+		"/Users/tony/Documents/microscope/client/templates/includes/header.html",
+		"/Users/tony/Documents/microscope/client/templates/includes/access_denied.html",
+		"/Users/tony/Documents/microscope/client/helpers/config.js",
+		"/Users/tony/Documents/microscope/collections/posts.js",
+		"/Users/tony/Documents/microscope/client/templates/applications/not_found.html",
+		"/Users/tony/Documents/microscope/server/publications.js",
+		"/Users/tony/Documents/microscope/client/templates/posts/post_page.html",
+		"/Users/tony/Documents/microscope/client/templates/includes/loading.html",
+		"/Users/tony/Documents/microscope/client/main.html",
+		"/Users/tony/Documents/microscope/client/main.js",
+		"/Users/tony/Documents/microscope/server/fixtures.js",
+		"/Users/tony/.eslintrc",
+		"/Users/tony/Documents/microscope/client/stylesheets/style.css",
+		"/Users/tony/schizophrenia/src/common/logging/actions.js",
+		"/Users/tony/schizophrenia/src/common/contacts/actions.js",
+		"/Users/tony/schizophrenia/src/common/contacts/reducer.js",
+		"/Users/tony/schizophrenia/src/common/ui/actions.js",
+		"/Users/tony/schizophrenia/src/common/app/mapDispatchToProps.js",
+		"/Users/tony/schizophrenia/src/common/logging/selector.js",
+		"/Users/tony/schizophrenia/src/common/logging/constants.js",
+		"/Users/tony/schizophrenia/src/common/ui/reducer.js",
+		"/Users/tony/schizophrenia/src/common/logging/models.js",
+		"/Users/tony/schizophrenia/src/native/support/Page.react.js",
+		"/Users/tony/schizophrenia/src/common/app/reducer.js",
+		"/Users/tony/schizophrenia/src/common/logging/reducer.js",
+		"/Users/tony/schizophrenia/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js",
+		"/Users/tony/schizophrenia/src/native/app/App.react.js",
+		"/Users/tony/schizophrenia/gulpfile.babel.js",
+		"/Users/tony/schizophrenia/src/common/lib/routes.js",
+		"/Users/tony/Documents/Reading list for SUPER",
+		"/Users/tony/schizophrenia/node_modules/react-native-contacts/index.js",
+		"/Users/tony/schizophrenia/android/app/build.gradle",
+		"/Users/tony/schizophrenia/android/app/src/main/java/com/este/MainActivity.java",
+		"/Users/tony/schizophrenia/android/app/src/main/AndroidManifest.xml",
+		"/Users/tony/schizophrenia/package.json",
+		"/Users/tony/schizophrenia/android/settings.gradle",
+		"/Users/tony/schizophrenia/webpack/makeConfig.js",
+		"/Users/tony/schizophrenia/src/native/index.js",
+		"/Users/tony/schizophrenia/src/native/log/agenda/Page.react.js",
+		"/Users/tony/schizophrenia/node_modules/react-native/Libraries/react-native/react-native.js",
+		"/Users/tony/schizophrenia/webpack/build.js",
+		"/Users/tony/schizophrenia/src/common/configureStore.js",
+		"/Users/tony/schizophrenia/src/native/ActionButton/index.js",
+		"/Users/tony/schizophrenia/webpack-assets.json",
+		"/Users/tony/Desktop/3911 Assignment 2.txt",
+		"/Users/tony/schizophrenia/node_modules/react-native/Libraries/ReactNative/ReactNativeReconcileTransaction.js",
+		"/Users/tony/schizophrenia/index.android.js",
+		"/Users/tony/schizophrenia/node_modules/redux-logger/lib/index.js",
+		"/Users/tony/schizophrenia/src/native/log/ActionButton.react.js",
+		"/Users/tony/Documents/nodetest.js",
+		"/Users/tony/Documents/test.js",
+		"/Users/tony/NetBeansProjects/lessonator/sql/user_insert.sql",
+		"/Users/tony/NetBeansProjects/lessonator/sql/view_insert.sql",
+		"/Users/tony/NetBeansProjects/lessonator/sql/content_insert.sql",
+		"/Users/tony/NetBeansProjects/lessonator/sql/insert-test-data.sql",
+		"/Users/tony/schizophrenia/src/native/medication/Page.react.js",
+		"/Users/tony/NetBeansProjects/lessonator/nbproject/private/private.xml",
+		"/Users/tony/NetBeansProjects/lessonator/nbproject/private/private.properties",
+		"/Users/tony/schizophrenia/src/native/ActionButton/Button.react.js",
+		"/Users/tony/schizophrenia/src/native/ActionButton/Item.react.js",
+		"/Users/tony/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/tony/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"...",
+			"Videos",
+			"VALUES",
+			"\"",
+			"Messages",
+			"searchValue",
+			"Messages",
+			"\"",
+			"generat",
+			"const",
+			"import",
+			"\n  // Enable LayoutAnimation on Android\n  UIManager.setLayoutAnimationEnabledExperimental &&\n    UIManager.setLayoutAnimationEnabledExperimental(true);\n\n  // TODO: Add local storage example.\n  process.env.IS_REACT_NATIVE = true;\n\n  const initialState = {\n    device: {\n      isMobile: true,\n    },\n  };\n  const store = configureStore({initialState});\n  store.dispatch(setPlatform(Platform.OS));\n\n  class Root extends Component {\n    render() {\n      return (\n        <Provider store={store}>\n          <App />\n        </Provider>\n      );\n    }\n  }\n\n  AppRegistry.registerComponent('Este', () => Root);\n",
+			"babel",
+			"autoprefixer",
+			"parent"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/tony/lessonator/server/publications.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1024,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/tony/lessonator/client/templates/includes/header.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1089,
+								1089
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/tony/lessonator/client/templates/applications/settings.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1401,
+								1401
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/tony/lessonator/client/templates/videos/video_page.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								156,
+								156
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/tony/lessonator/client/templates/videos/video_Item.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 413,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								362,
+								362
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/tony/lessonator/client/templates/includes/header.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58,
+								58
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 173.0
+	},
+	"pinned_build_system": "",
+	"project": "lessonator.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"android",
+				"android/app/src/main/AndroidManifest.xml"
+			],
+			[
+				"mainacti",
+				"android/app/src/main/java/com/este/MainActivity.java"
+			],
+			[
+				"app/build",
+				"android/app/build.gradle"
+			],
+			[
+				"android/set",
+				"android/settings.gradle"
+			],
+			[
+				"gulp",
+				"gulpfile.babel.js"
+			],
+			[
+				"lib/routes",
+				"src/common/lib/routes.js"
+			],
+			[
+				"uireducer",
+				"src/common/ui/reducer.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 189.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

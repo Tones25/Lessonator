@@ -2,11 +2,13 @@
 // provided, we publish only Videos that match the given search value.
 Meteor.publish('videos', () => Videos.find({}));
 Meteor.publish('search', function(userSearch) {
-	check(userSearch, String);
   if (!userSearch) {
-  	console.log('searching');
-    return Videos.find({});
+    userSearch = '';
+    check(userSearch, String);
+  	console.log('searching', userSearch);
+    return Videos.find({ytId: ''});
   }
+  check(userSearch, String);
   console.log('searching for ', userSearch);
   return  Videos.find(
     { $text: {$search: userSearch} },
@@ -26,3 +28,12 @@ Meteor.publish('search', function(userSearch) {
     }
   );
 });
+Meteor.publish("userData", function () {
+  if (this.userId) {
+    return Meteor.users.find({_id: this.userId},
+                             {fields: {'ratedVids': 1}});
+  } else {
+    this.ready();
+  }
+});
+

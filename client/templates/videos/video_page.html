@@ -1,5 +1,18 @@
 <template name="videoPage">
+
+	{{#if currentUser}}
+		{{#if isRated}}
+			<h4>Thanks for conributing to the community by rating this video!</h4>
+		{{else}}
+		<div class="rating">
+			{{> starsRating id='rating' mutable=true}}
+		</div>
+		{{/if}}
+	{{else}}
+		<h4>You must be logged in to rate videos</h4>
+	{{/if}}
 	<div class="player-wrapper">
 	{{> player}}
 	</div>
+	<textarea></textarea>
 </template>
