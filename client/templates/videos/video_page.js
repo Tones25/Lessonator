@@ -6,6 +6,17 @@ Template.videoPage.rendered = function() {
 	onVideoPageLoaded();
 };
 
+//each time videoPage is rendered currentVideo subscription is renewed.
+//this keeps only the current video in client Video collection while
+//on this page
+Template.videoPage.onCreated(function() {
+	var self = this;
+	self.autorun(function() {
+		var ytId = Session.get('ytId');
+		self.subscribe('currentVideo', ytId);
+	});
+});
+
 Template.videoPage.helpers({
 	isRated: function() {
 		let userRatedVids = Meteor.user().ratedVids;
@@ -25,7 +36,15 @@ Template.videoPage.events({
 		let currentVidId = Session.get('ytId');
 		let userRatedVids = Meteor.user().ratedVids;
 		userRatedVids.push(currentVidId);
-		let currentVid = ClientVideo.findOne({_id: currentVidId});
+		//method is in /lib/collctions
+		Meteor.call('videoRatingUpdate', currentVidId, userRating,
+			function(error, result) {
+				if(error) {
+					console.log(error);
+					return;
+				}
+			});
+		/*let currentVid = ClientVideo.findOne({_id: currentVidId});
 		let newRating;
 		//if first rating, use userrating(avoid division by 0)
 		if(currentVid.numOfRatings !== 0) {
@@ -34,9 +53,9 @@ Template.videoPage.events({
 		} else {
 			newRating = userRating;
 			console.log('n');
-		}
+		}*/
 
-		console.log(newRating);
+		//console.log(newRating);
 		Meteor.users.update(
 			{_id: Meteor.userId()},
 			{$set: {'ratedVids': userRatedVids}},
@@ -45,7 +64,5 @@ Template.videoPage.events({
 				console.log(error);
 			}
 		});
-
-
 	}
-})
+});

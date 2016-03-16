@@ -1,1 +1,1 @@
-ClientVideo = new Mongo.Collection(null);
+//ClientVideo = new Mongo.Collection(null);
