@@ -44,18 +44,7 @@ Template.videoPage.events({
 					return;
 				}
 			});
-		/*let currentVid = ClientVideo.findOne({_id: currentVidId});
-		let newRating;
-		//if first rating, use userrating(avoid division by 0)
-		if(currentVid.numOfRatings !== 0) {
-			newRating = (currentVid.rating + userRating) / currentVid.numOfRatings;
-			console.log('y');
-		} else {
-			newRating = userRating;
-			console.log('n');
-		}*/
 
-		//console.log(newRating);
 		Meteor.users.update(
 			{_id: Meteor.userId()},
 			{$set: {'ratedVids': userRatedVids}},
