@@ -10,7 +10,9 @@ To Do's
 
 -make look purdy
 
--submit videos
+-submit videos (working partial)
+    -need to restrict access to submit page if not logged in
+    -need to fix insert allowance in video.js
 
 -homepage
 	-if not logged in show highly rated/most viewed vidoes
