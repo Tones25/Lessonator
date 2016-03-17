@@ -5,9 +5,24 @@ Template.videoSubmit.events({
         var title = $("#vidTitle").val();
         var tags = $("#vidTags").val();
         var ytId = getIdFromUrl($("#vidUrl").val());
-        if (ytId != -1) {
-            //do final stuff
-        }
+        Meteor.call('ifVideoExists',ytId, function(err,bool){
+            if(err){
+                console.log(err);
+            }else{
+                if(!bool){
+                    Videos.insert({
+                        _id: ytId,
+                        title: title,
+                        tags: tags,
+                        rating: 0,
+                        numOfRatings: 0
+                    });
+                    Router.go('videoPage', {_id: ytId});
+                }else{
+                    alert('looks like that already exists');
+                }
+            }
+        });
     }
 });
 
@@ -17,18 +32,5 @@ function getIdFromUrl(url){
     if(ampersandPosition != -1) {
         strId = strId.substring(0, ampersandPosition);
     }
-    $.ajax({
-        url: "https://gdata.youtube.com/feeds/api/videos/" + strId + "?v=2&alt=json",
-        dataType: "jsonp",
-        success: function(data) {
-            console.log("success");
-            return strId;
-        },
-        error: function(jqXHR, textStatus, errorThrown)
-        {
-            // Handle errors here
-            alert('ERRORS: ' + textStatus);
-            return -1;
-        }
-    });
+    return strId;
 }
