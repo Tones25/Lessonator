@@ -1,7 +1,13 @@
-// If `searchValue` is not provided, we publish all known Videos. If it is
-// provided, we publish only Videos that match the given search value.
 Meteor.publish('videos', () => Videos.find({}));
+//publish  the currently rendered video only to client db
+Meteor.publish('currentVideo', function(videoId) {
+  check(videoId, String);
+  return Videos.find({_id: videoId});
+});
+
 Meteor.publish('search', function(userSearch) {
+  // If `searchValue` is not provided, we publish all known Videos. If it is
+// provided, we publish only Videos that match the given search value.
   if (!userSearch) {
     userSearch = '';
     check(userSearch, String);

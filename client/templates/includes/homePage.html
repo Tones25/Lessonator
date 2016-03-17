@@ -1,3 +1,10 @@
 <template name="homePage">
-	<h1>Test</h1>
+{{#if currentUser}}
+<h3>Suggested videos just for you</h3>
+	{{>carouselSuggested}}
+{{/if}}
+<h3>Top rated videos</h3>
+{{>carouselTopRated}}
+<h3>Newest videos</h3>
+{{>carouselNewest}}
 </template>

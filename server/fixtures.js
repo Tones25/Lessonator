@@ -70,4 +70,3 @@ Meteor.users.allow({
 	}
 });
 
-
