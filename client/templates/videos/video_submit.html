@@ -1,23 +1,25 @@
 <template name="videoSubmit">
-    <h1>vidya</h1>
-    <div class="form-group">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Title">
+    <form>
+        <h1>vidya</h1>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" id="vidTitle" class="form-control" placeholder="Title">
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Youtube URL">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" id="vidUrl" class="form-control" placeholder="Youtube URL">
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="tags (beat,country,rock)">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" id="vidTags" class="form-control" placeholder="tags (beat,country,rock)">
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="input-group">
-            <button type="button" class="btn-primary btn">Submit</button>
+        <div class="form-group">
+            <div class="input-group">
+                <button type="submit" class="btn-primary btn">Submit</button>
+            </div>
         </div>
-    </div>
+    </form>
 </template>
