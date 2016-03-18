@@ -2,12 +2,13 @@
     <div class="ui fixed inverted menu">
         <div class="container">
             <a class="header item" href="{{pathFor 'homePage'}}">Lessonator</a>
-            <div class="item">
+            <form class="item" role="search">
                 <div class="ui transparent inverted icon input">
                     <i class="search icon"></i>
-                    <input type="text" placeholder="Search">
+                    <input name="userSearch" type="text" placeholder="Search">
                 </div>
-            </div>
+                <!--<button type="submit" class="btn btn-default">Submit</button>-->
+            </form>
             <div class="right menu">
                 {{#if currentUser}}
                     <a class="item" href="{{pathFor 'videoSubmit'}}">Submit a Video</a>
