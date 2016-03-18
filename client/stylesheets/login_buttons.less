@@ -1,5 +1,11 @@
 //////////////////// MIXINS
 
+@Lessonator-menu-height: 45px;
+
+.menu{
+  height:@Lessonator-menu-height;
+}
+
 // Minimal, well-documented, general-purpose CSS mixins.
 // (Some are same as Bootstrap.)
 
@@ -40,8 +46,8 @@
   -ms-user-select: none; // IE10+
 
   // These delarations not implemented in browsers yet:
-  -o-user-select: none;
-  user-select: none;
+  //-o-user-select: none;
+  //user-select: none;
 
   // In IE <= 9 and Opera, need unselectable="on" in the HTML.
 }
@@ -325,8 +331,8 @@
   // negative margins on the dropdown.
   // XXX We could use negative margins to compensate for the
   // border too.
-  top: -@meteor-accounts-dialog-border-width;
-  left: -(@meteor-accounts-dialog-border-width + @login-buttons-accounts-dialog-width - 60);
+  top: -@meteor-accounts-dialog-border-width + @Lessonator-menu-height;
+  left: -(@meteor-accounts-dialog-border-width + @login-buttons-accounts-dialog-width - 70);
 }
 
 #login-buttons.login-buttons-dropdown-align-right #login-dropdown-list {
@@ -342,7 +348,7 @@
 .accounts-centered-dialog {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-  z-index: 1001;
+  z-index: 10;
   position: fixed;
 
   left: 50%;
