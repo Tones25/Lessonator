@@ -5,6 +5,11 @@ Meteor.publish('currentVideo', function(videoId) {
   return Videos.find({_id: videoId});
 });
 
+Meteor.publish('vidComments', function (id){
+  check(id, String);
+  return Comments.find({video: id}, {sort:{dateTime: -1}});
+});
+
 Meteor.publish('search', function(userSearch) {
   // If `searchValue` is not provided, we publish all known Videos. If it is
 // provided, we publish only Videos that match the given search value.

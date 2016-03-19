@@ -12,7 +12,16 @@
 		<h4>You must be logged in to rate videos</h4>
 	{{/if}}
 	<div class="player-wrapper">
-	{{> player}}
+	    {{> player}}
 	</div>
-	<textarea></textarea>
+    {{#if currentUser}}
+        <textarea id="commentText"></textarea>
+        <button id="commentSubmit">Comment</button>
+    {{/if}}
+    <div class="commentSection">
+        <h3>there are {{numComments}} comments:</h3>
+        {{#each Comments}}
+            {{> commentView}}
+        {{/each}}
+    </div>
 </template>
