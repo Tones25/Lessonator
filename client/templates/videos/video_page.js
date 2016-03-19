@@ -67,13 +67,14 @@ Template.videoPage.events({
 		console.log({
 			commentText: comment,
 			dateTime: dt+" -- CLIENT",
-			user: Meteor.userId(),
+			userId: Meteor.userId(),
 			video: Session.get('ytId')
 		});
 		Comments.insert({
 			commentText: comment,
 			dateTime: dt+" -- CLIENT",
-			user: Meteor.userId(),
+			userId: Meteor.userId(),
+			username: Meteor.user().username,
 			video: Session.get('ytId')
 		});
 	}
