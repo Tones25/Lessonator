@@ -3,6 +3,7 @@ function onVideoPageLoaded() {
 }
 
 Template.videoPage.rendered = function() {
+	this.subscribe('vidComments',(Session.get('ytId')));
 	onVideoPageLoaded();
 };
 
@@ -27,7 +28,12 @@ Template.videoPage.helpers({
 			return true;
 		}
 	},
-
+	numComments: function(){
+		return Comments.find().count();
+	},
+	Comments: function(){
+		return Comments.find({},{sort:{dateTime: -1}}).fetch();
+	}
 });
 
 Template.videoPage.events({
@@ -52,6 +58,24 @@ Template.videoPage.events({
 			if(error) {
 				console.log(error);
 			}
+		});
+	},
+	'click #commentSubmit': function(e){
+		let comment = $('#commentText').val();
+		let dt = new Date();
+		// just to check that we are getting server time not client
+		console.log({
+			commentText: comment,
+			dateTime: dt+" -- CLIENT",
+			userId: Meteor.userId(),
+			video: Session.get('ytId')
+		});
+		Comments.insert({
+			commentText: comment,
+			dateTime: dt+" -- CLIENT",
+			userId: Meteor.userId(),
+			username: Meteor.user().username,
+			video: Session.get('ytId')
 		});
 	}
 });

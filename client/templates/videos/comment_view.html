@@ -1,0 +1,14 @@
+<template name="commentView">
+    <div class="ui segment">
+        {{#if edit}}
+
+        {{else}}
+            <p>{{ username }}</p>
+            <p id="commentText">{{ commentText }}</p>
+            {{#if isOwner}}
+                <button id="edit">edit</button>
+                <button id="delete">delete</button>
+            {{/if}}
+        {{/if}}
+    </div>
+</template>
