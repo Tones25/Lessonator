@@ -10,12 +10,14 @@ Template.videoSubmit.events({
                 console.log(err);
             }else{
                 if(!bool){
+                    var now = new Date().getTime();
                     Videos.insert({
                         _id: ytId,
-                        title: title,
+                        title: title.toLowerCase(),
                         tags: tags,
                         rating: 0,
-                        numOfRatings: 0
+                        numOfRatings: 0,
+                        submitted: new Date(now),
                     });
                     Router.go('videoPage', {_id: ytId});
                 }else{
