@@ -1,20 +1,24 @@
-Meteor.publish('videosByRating',
-  () => Videos.find({},
+Meteor.publish('videosByRating', function(limit) {
+  check(limit, Number);
+  return Videos.find({},
     {
       sort: {rating: -1},
-      limit: 9,
-    }));
+      limit: limit,
+    });
+});
 
-Meteor.publish('videosByNewest', function() {
+Meteor.publish('videosByNewest', function(limit) {
+  check(limit, Number);
   return Videos.find({},
     {
       sort: {submitted: -1},
-      limit: 9,
+      limit: limit,
     });
   });
 
-Meteor.publish('videosBySuggested', function(query) {
+Meteor.publish('videosBySuggested', function(query, limit) {
   check(query, String);
+  check(limit, Number);
 
   var sub = this;
   var suggestedCursor =   Videos.find(
@@ -31,7 +35,8 @@ Meteor.publish('videosBySuggested', function(query) {
       // `score` property specified in the projection fields above.
       sort: {
         score: { $meta: 'textScore' }
-      }
+      },
+      limit: limit
     }
   );
   Mongo.Collection._publishCursor(suggestedCursor, sub, 'videosBySuggested');

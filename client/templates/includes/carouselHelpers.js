@@ -1,7 +1,7 @@
  
 Template.topRatedSlide1.helpers({
 	topRatedVideoSet1: function() {
-		Meteor.subscribe('videosByRating');
+		Meteor.subscribe('videosByRating', 9);
 
 	      return Videos.find({},
 	      	{
@@ -41,7 +41,7 @@ Template.topRatedSlide3.helpers({
 
 Template.newestSlide1.helpers({
 	 newestVideoSet1: function() {
-	 	Meteor.subscribe('videosByNewest');
+	 	Meteor.subscribe('videosByNewest', 9);
 	 		return Videos.find({},
 	 		{
 	 			sort: {submitted: -1},
@@ -96,7 +96,7 @@ function cookUpSuggestedQuery(user) {
 Template.suggestedSlide1.helpers({
 	 suggestedVideoSet1: function() {
 	 	 var query = cookUpSuggestedQuery(Meteor.user());
-	 	Meteor.subscribe('videosBySuggested', query);
+	 	Meteor.subscribe('videosBySuggested', query, 9);
 
 	 		return ClientCollection.find({},
 	 		{

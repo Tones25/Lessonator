@@ -1,0 +1,20 @@
+<template name="videoListSuggested">
+<h1>Here's some videos we think you might like</h1>
+<div class="container">
+<div class="row">
+	<div class="videos">
+		{{#each videos}}
+			{{>videoItem}}
+		{{/each}}
+
+		{{#if nextPath}}
+			<a href="{{nextPath}}" class="load-more">Load more</a>
+		{{else}}
+		{{#unless ready}}
+			{{>spinner}}
+		{{/unless}}
+		{{/if}}
+	</div>
+	</div>
+	</div>
+</template>

@@ -1,5 +1,5 @@
 Template.adminPage.events({
-	'submit form': function(e) {
+	'submit form': function(e, template) {
 		e.preventDefault();
 
 		var username = $(e.target).find('[name=username]').val();
@@ -7,8 +7,11 @@ Template.adminPage.events({
 		console.log(username + ' ' + password);
 		Meteor.call('createMod', username, password, function(error, result) {
 			if(error) {
-				console.log(error);
+				throwError(error.reason);
+			} else {
+				throwError('Moderator account created');
 			}
 		});
+		template.find('form').reset();
 },
 });

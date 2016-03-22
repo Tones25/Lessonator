@@ -31,7 +31,6 @@ Meteor.methods({
 	createMod: function(username, password) {
 		check(username, String);
 		check(password, String);
-		console.log(Meteor.users.find({username: username}).fetch());
 		if(Meteor.users.findOne({username: username})) {
 			console.log('username already exists');
 		} else {
