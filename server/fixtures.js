@@ -97,21 +97,5 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 	}
 }
 
-//adds fields to the default user table that are used for
-//ratings and suggested viewing
-Accounts.onCreateUser(function(options, user) {
-	user.ratedVids = [];
-	user.tagStoreForVideoSuggestion = [];
-	if (options.profile) {
-		user.profile = options.profile;
-	}
-	return user;
-});
 
-//gigantic security hole but it'll do for now
-Meteor.users.allow({
-	update: function() {
-		return true;
-	}
-});
 

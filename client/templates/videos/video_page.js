@@ -40,7 +40,7 @@ Template.videoPage.events({
 		Meteor.call('videoRatingUpdate', currentVidId, userRating,
 			function(error, result) {
 				if(error) {
-					console.log(error);
+					throwError('Something went wrong submitting your rating');
 					return;
 				}
 			});

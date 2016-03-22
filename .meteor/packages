@@ -26,5 +26,6 @@ perak:fuzzy-search
 underscore
 barbatus:stars-rating
 twbs:bootstrap
-semantic:ui-css
 accounts-ui-unstyled
+alanning:roles
+semantic:ui-css
