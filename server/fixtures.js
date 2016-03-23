@@ -8,6 +8,12 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		rating: 1,
 		numOfRatings: 5,
 		submitted: new Date(now - 1 * 3600 * 1000),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 
 	Videos.insert({
@@ -17,6 +23,12 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		rating: 3,
 		numOfRatings: 1,
 		submitted: new Date(now - 2 * 3600 * 1000),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 
 	Videos.insert({
@@ -26,6 +38,12 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		rating: 2,
 		numOfRatings: 3,
 		submitted: new Date(now - 3 * 3600 * 1000),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 
 	Videos.insert({
@@ -35,6 +53,12 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		rating: 4,
 		numOfRatings: 2,
 		submitted: new Date(now - 4 * 3600 * 1000),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 
 	Videos.insert({
@@ -44,6 +68,12 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		rating: 5,
 		numOfRatings: 1,
 		submitted: new Date(now - 5 * 3600 * 1000),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 	Videos.insert({
 		_id: '2d7PDJqfia0',
@@ -52,6 +82,12 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		rating: 0,
 		numOfRatings: 0,
 		submitted: new Date(now - 6 * 3600 * 1000),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 	Videos.insert({
 		_id: '8T-85IbmuxE',
@@ -60,6 +96,12 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		rating: 0,
 		numOfRatings: 0,
 		submitted: new Date(now - 7 * 3600 * 1000),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 	Videos.insert({
 		_id: 'rXq5WcasEdc',
@@ -68,6 +110,12 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		rating: 0,
 		numOfRatings: 0,
 		submitted: new Date(now - 7 * 3600 * 1000),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 	Videos.insert({
 		_id: 'zqUv8uPDneo',
@@ -76,6 +124,12 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		rating: 0,
 		numOfRatings: 0,
 		submitted: new Date(now - 7 * 3600 * 1000),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 	Videos.insert({
 		_id: 'Qsm0wOmgIuw',
@@ -84,6 +138,12 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		rating: 0,
 		numOfRatings: 0,
 		submitted: new Date(now - 7 * 3600 * 1000),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 	for(var i = 0; i< 30; i++) {
 		Videos.insert({
@@ -92,7 +152,13 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 		tags: 'bass, beginner',
 		rating: 0,
 		numOfRatings: 0,
-		submitted: new Date(now - 7 * 3600 * 1000 + i),
+		submitted: new Date(now - 7 * 3600 * i *5),
+		flaged: false,
+		flagType: {
+			notLesson: 0,
+			badTitle: 0,
+			badTags: 0,
+		},
 	});
 	}
 }

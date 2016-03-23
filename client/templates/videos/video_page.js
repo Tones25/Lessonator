@@ -53,5 +53,5 @@ Template.videoPage.events({
 				console.log(error);
 			}
 		});
-	}
+	},
 });
