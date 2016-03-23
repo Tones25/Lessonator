@@ -1,3 +1,15 @@
 <template name="modPage">
 	<h1>Mod Page</h1>
+	<div class="videos">
+		{{#each videos}}
+			{{>reportItem}}
+		{{/each}}
+		{{#if nextPath}}
+			<a href="{{nextPath}}" class="load-more">Load more</a>
+		{{else}}
+		{{#unless ready}}
+			{{>spinner}}
+		{{/unless}}
+		{{/if}}
+	</div>
 </template>

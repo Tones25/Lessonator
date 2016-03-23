@@ -1,0 +1,10 @@
+<template name="reportItem">
+	<div class="entry">
+		<h3><a href="{{pathFor 'videoPage'}}" id="link">{{title}}</a></h3>
+		{{> starsRating rating=rating size=20}}
+        <p>Rated {{numOfRatings}} times</p>
+        <p>Submitted {{submitted}}</p>
+        <p>{{getFlags}}</p>
+
+	</div>
+</template>

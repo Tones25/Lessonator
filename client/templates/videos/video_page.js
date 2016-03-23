@@ -18,6 +18,9 @@ Template.videoPage.onCreated(function() {
 });
 
 Template.videoPage.helpers({
+	video: function() {
+		return Videos.findOne();
+	},
 	isRated: function() {
 		let userRatedVids = Meteor.user().ratedVids;
 		let currentVid = Session.get('ytId');

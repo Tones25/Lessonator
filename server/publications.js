@@ -83,6 +83,12 @@ Meteor.publish('search', function(userSearch, limit) {
     }
   );
 });
+
+Meteor.publish('flaged', function(limit) {
+  check(limit, Number);
+  return Videos.find({flaged: true}, {limit: limit});
+});
+
 Meteor.publish("userData", function () {
   if (this.userId) {
     return Meteor.users.find({_id: this.userId},
