@@ -76,7 +76,9 @@ Template.videoPage.events({
 		});
 		Comments.insert({
 			commentText: comment,
-			dateTime: dt+" -- CLIENT",
+			dateTime: dt,
+			rating: 0,
+			ratedBy: [],
 			userId: Meteor.userId(),
 			username: Meteor.user().username,
 			video: Session.get('ytId')

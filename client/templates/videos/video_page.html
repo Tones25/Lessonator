@@ -19,7 +19,6 @@
 	<div class="player-wrapper">
 	    {{> player}}
 	</div>
-<<<<<<< HEAD
 	<div class="flag">
 		 <a class="item" data-toggle="modal" data-target="#reportModal">Report</a>
                     {{> report}}
@@ -37,6 +36,11 @@
     {{/if}}
     <div class="commentSection">
         <h3>there are {{numComments}} comments:</h3>
+        <h4>Sort comments by: </h4>
+        <select>
+            <option value="newest">Newest</option>
+            <option value="topRated">Top Rated</option>
+        </select>
         {{#each Comments}}
             {{> commentView}}
         {{/each}}
