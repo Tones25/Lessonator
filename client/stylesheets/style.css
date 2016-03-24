@@ -1,3 +1,43 @@
 .modal-backdrop{
     z-index: 2 !important;
 }
+
+.thumbnail{
+    background-color: #333333;
+    overflow-y: hidden;
+    max-height: 272px;
+}
+
+.caption{
+    position: absolute;
+    top: 0;
+    color: aliceblue !important;
+    max-width: 90%;
+}
+
+hl{
+    color: snow;
+    background-color: RGBA(52, 73, 94, .7);
+    padding: 1.5%;
+}
+
+.thumbnail img{
+    width:100%;
+}
+
+#sIcon{
+    float: right;
+}
+
+.errors{
+    margin-top: 55px;
+    position: absolute;
+    float: right;
+}
+
+.thumbnail:hover {
+    border: 3px solid RGBA(61, 154, 199, .6);
+}
+.thumbnail:hover .cover{
+    opacity:0.5;
+}

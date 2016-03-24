@@ -1,16 +1,23 @@
 Template.header.events({
 	//userSearch is the query string
 	'keyup form input': _.debounce(function(event, template) {
-		  event.preventDefault();
-		  Session.set('userSearch', template.find('form input').value);
+		  	search();
 		}, 300),
-
 	'submit form': function(e) {
 		e.preventDefault();
-
-		var userSearch = $(e.target).find('[name=userSearch]').val();
-		Session.set('userSearch', userSearch);
-
-		Router.go('videoList', {});
+			search();
 		},
+	'click #sIcon': function(e){
+			search();
+		}
 });
+
+function search(){
+	var userSearch = $("#userSearch").val();
+	if(userSearch != ""){
+		Session.set('userSearch', userSearch);
+		Router.go('videoList', {});
+	}else{
+		Router.go('homePage');
+	}
+}
