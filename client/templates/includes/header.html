@@ -9,7 +9,18 @@
                 </div>
                 <!--<button type="submit" class="btn btn-default">Submit</button>-->
             </form>
+            <a class="item" href="{{pathFor 'videoListNewest'}}">Newest Videos</a>
+            <a class="item" href="{{pathFor 'videoListToprated'}}">Top Rated Videos</a>
+            <!--
+            <a class="item" href="{{pathFor 'videoListSuggested'}}">Suggested Videos</a>
+            -->
             <div class="right menu">
+            {{#if isInRole 'admin'}}
+                <a class="item" href="{{pathFor 'adminPage'}}">admin</a>
+            {{/if}}
+            {{#if isInRole 'mod'}}
+                <a class="item" href="{{pathFor 'modPage'}}">Mod Tools</a>
+            {{/if}}
                 {{#if currentUser}}
                     <a class="item" href="{{pathFor 'videoSubmit'}}">Submit a Video</a>
                     <a class="item" data-toggle="modal" data-target="#settingsModal">Settings</a>
