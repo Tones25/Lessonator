@@ -5,5 +5,13 @@
         {{#if isOwner}}
             <button id="delete">delete</button>
         {{/if}}
+        {{#if currentUser}}
+            <button id="upVote">up vote</button>
+            <button id="downVote">down vote</button>
+            <p>Rating: {{rating}}</p>
+            {{#if isRated}}
+                <p>Thanks for rating!</p>
+            {{/if}}
+        {{/if}}
     </div>
 </template>

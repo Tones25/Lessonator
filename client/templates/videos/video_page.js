@@ -19,6 +19,9 @@ Template.videoPage.onCreated(function() {
 });
 
 Template.videoPage.helpers({
+	video: function() {
+		return Videos.findOne();
+	},
 	isRated: function() {
 		let userRatedVids = Meteor.user().ratedVids;
 		let currentVid = Session.get('ytId');
@@ -46,7 +49,7 @@ Template.videoPage.events({
 		Meteor.call('videoRatingUpdate', currentVidId, userRating,
 			function(error, result) {
 				if(error) {
-					console.log(error);
+					throwError('Something went wrong submitting your rating');
 					return;
 				}
 			});
@@ -60,6 +63,7 @@ Template.videoPage.events({
 			}
 		});
 	},
+
 	'click #commentSubmit': function(e){
 		let comment = $('#commentText').val();
 		let dt = new Date();
@@ -72,7 +76,9 @@ Template.videoPage.events({
 		});
 		Comments.insert({
 			commentText: comment,
-			dateTime: dt+" -- CLIENT",
+			dateTime: dt,
+			rating: 0,
+			ratedBy: [],
 			userId: Meteor.userId(),
 			username: Meteor.user().username,
 			video: Session.get('ytId')

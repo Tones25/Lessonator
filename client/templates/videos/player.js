@@ -16,6 +16,7 @@ Player = {
           videoId: Session.get('ytId'),
           events: {
             'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange,
           }
         });
         videoTemplate.rendered = onYouTubeIframeAPIReady;
@@ -24,6 +25,17 @@ Player = {
 
       function onPlayerReady(event) {
         event.target.playVideo();
+      }
+
+      function onPlayerStateChange(event){
+        if(event.data === 0) {
+          Meteor.call('updateSuggestedTags', Meteor.user(),
+            Session.get('ytId'), function(error, result) {
+            if(error) {
+              console.log(error);
+            }
+          })
+        }
       }
 }
 };

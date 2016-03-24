@@ -1,6 +1,7 @@
 <template name="layout">
-	<div class="container">
-		{{> header}}
+    {{> header}}
+    {{>errors}}
+	<div class="container" style="margin-top: 60px;">
 		<div id="main">
 			{{> yield}}
 		</div>

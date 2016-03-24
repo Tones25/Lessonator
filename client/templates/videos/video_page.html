@@ -10,15 +10,37 @@
 	{{else}}
 		<h4>You must be logged in to rate videos</h4>
 	{{/if}}
+	<div class="video-info">
+	{{#with video}}
+		<h3>{{title}}</h3>
+		<h3>{{tags}}</h3>
+		{{/with}}
+	</div>
 	<div class="player-wrapper">
 	    {{> player}}
 	</div>
+	<div class="flag">
+		 <a class="item" data-toggle="modal" data-target="#reportModal">Report</a>
+                    {{> report}}
+	</div>
+	{{#if isInRole 'mod'}}
+	<div class="modTools">
+		 <a class="item" data-toggle="modal" data-target="#modModal">Edit/Delete</a>
+                    {{> modTools}}
+	</div>
+	{{/if}}
+
     {{#if currentUser}}
         <textarea id="commentText"></textarea>
         <button id="commentSubmit">Comment</button>
     {{/if}}
     <div class="commentSection">
         <h3>there are {{numComments}} comments:</h3>
+        <h4>Sort comments by: </h4>
+        <select>
+            <option value="newest">Newest</option>
+            <option value="topRated">Top Rated</option>
+        </select>
         {{#each Comments}}
             {{> commentView}}
         {{/each}}

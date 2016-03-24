@@ -1,11 +1,9 @@
-<template name="videoList">
-<div class="container">
-<div class="row">
+<template name="modPage">
+	<h1>Mod Page</h1>
 	<div class="videos">
 		{{#each videos}}
-			{{>videoItem}}
+			{{>reportItem}}
 		{{/each}}
-
 		{{#if nextPath}}
 			<a href="{{nextPath}}" class="load-more">Load more</a>
 		{{else}}
@@ -13,7 +11,5 @@
 			{{>spinner}}
 		{{/unless}}
 		{{/if}}
-	</div>
-	</div>
 	</div>
 </template>
