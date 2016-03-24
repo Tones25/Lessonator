@@ -1,5 +1,4 @@
 <template name="videoPage">
-
 	{{#if currentUser}}
 		{{#if isRated}}
 			<h4>Thanks for conributing to the community by rating this video!</h4>
@@ -18,8 +17,9 @@
 		{{/with}}
 	</div>
 	<div class="player-wrapper">
-	{{> player}}
+	    {{> player}}
 	</div>
+<<<<<<< HEAD
 	<div class="flag">
 		 <a class="item" data-toggle="modal" data-target="#reportModal">Report</a>
                     {{> report}}
@@ -30,6 +30,15 @@
                     {{> modTools}}
 	</div>
 	{{/if}}
-	<textarea></textarea>
-</template>
 
+    {{#if currentUser}}
+        <textarea id="commentText"></textarea>
+        <button id="commentSubmit">Comment</button>
+    {{/if}}
+    <div class="commentSection">
+        <h3>there are {{numComments}} comments:</h3>
+        {{#each Comments}}
+            {{> commentView}}
+        {{/each}}
+    </div>
+</template>
