@@ -1,9 +1,54 @@
 <template name="adminPage">
 	<h1>admin page</h1>
-	<h3>Add moderator account</h3>
-	<form class="item" role="createMod">
-		<input type="text" name="username" placeholder="user name">
-		<input type="text" name="password" placeholder="password">
-		<input type="submit" value="submit">
-	</form>
+
+    <br>
+    <div class="panel panel-default col-md-6">
+        <div class="panel-body">
+            <div class="btn-group-sm">
+                <h3 class="panel-title inline">Moderators</h3>
+                <button id="newModBttn" class="pull-right btn btn-sm btn-primary">new Moderator</button>
+                <form class="input-group pull-right hidden" id="modInputs">
+                    <input type="text" class="input input-sm" id="modUsername" placeholder="user name">
+                    <input type="text" class="input input-sm" id="modPassword" placeholder="password">
+                    <button id="newModSave" class="btn btn-sm btn-primary">Save</button>
+                    <button id="newModCancel" class="pull-right btn btn-sm">Cancel</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="panel-body">
+            <div class="well well-sm userList">
+                <div class="list-group">
+                {{#each mods}}
+                    {{> modListItem}}
+                {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default col-md-6">
+        <div class="panel-body">
+            <div class="btn-group-sm">
+                <h3 class="panel-title inline">Users</h3>
+                <button id="newUsrBttn" class="pull-right btn btn-sm btn-primary">new User</button>
+                <form class="input-group pull-right hidden" id="usrInputs">
+                    <input type="text" class="input input-sm" id="usrUsername" placeholder="user name">
+                    <input type="text" class="input input-sm" id="usrPassword" placeholder="password">
+                    <button id="newUsrSave" class="btn btn-sm btn-primary">Save</button>
+                    <button id="newUsrCancel" class="pull-right btn btn-sm">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="well well-sm userList">
+                <div class="list-group">
+                {{#each usrs}}
+                    {{> usrListItem}}
+                {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
 </template>

@@ -96,11 +96,20 @@ Meteor.publish('flaged', function(limit) {
 });
 
 Meteor.publish("userData", function () {
-  if (this.userId) {
-    return Meteor.users.find({_id: this.userId},
-                             {fields: {'ratedVids': 1, 'tagStoreForVideoSuggestion': 1}});
-  } else {
-    this.ready();
-  }
-});
+    if(Roles.getRolesForUser(this.userId) == 'admin'){
+        Meteor.users.allow({
+            update: function() {
+                return true;
+            }
+        });
+        return Meteor.users.find({});
+    }else{
+        if (this.userId) {
+            return Meteor.users.find({_id: this.userId},
+                {fields: {'ratedVids': 1, 'tagStoreForVideoSuggestion': 1}});
+        } else {
+            this.ready();
+        }
+    }
 
+});

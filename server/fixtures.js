@@ -145,6 +145,91 @@ if (Videos.find().count() === 0) { var now = new Date().getTime();
 			badTags: 0,
 		},
 	});
+	Videos.insert({
+			_id:"IDgbfmT8hcM",
+			title:'\"That\" Pentatonic Lick\"',
+			tags:"bass, pentatonic, lick, solo",
+			rating: 0,
+			numOfRatings: 0,
+			submitted: new Date(now - 7 * 3600 * 1000),
+			flaged: false,
+			flagType: {
+				notLesson: 0,
+				badTitle: 0,
+				badTags: 0,
+			}
+		});
+	Videos.insert({
+			_id:"pYkLG0KoUfM",
+			title:'Slap bass lesson',
+			tags:"bass, slap, technique",
+			rating: 0,
+			numOfRatings: 0,
+			submitted: new Date(now - 7 * 3600 * 1000),
+			flaged: false,
+			flagType: {
+				notLesson: 0,
+				badTitle: 0,
+				badTags: 0
+			}
+		});
+	Videos.insert({
+			_id:"Ff5b3-D3Hs0",
+			title:'Introducing Arpeggios',
+			tags:"bass, Arpeggios, Arpeggio, solo, lick",
+			rating: 0,
+			numOfRatings: 0,
+			submitted: new Date(now - 7 * 3600 * 1000),
+			flaged: false,
+			flagType: {
+				notLesson: 0,
+				badTitle: 0,
+				badTags: 0
+			}
+		});
+	Videos.insert({
+			_id: "xXT9mirsfgk",
+			title:'Improvising over Jazz Chords',
+			tags:"Improvising, jazz, chords, progression",
+			rating: 0,
+			numOfRatings: 0,
+			submitted: new Date(now - 7 * 3600 * 1000),
+			flaged: false,
+			flagType: {
+				notLesson: 0,
+				badTitle: 0,
+				badTags: 0
+			}
+		});
+	Videos.insert({
+			_id:"CpBfY0UbIUQ",
+			title:'swing jazzy blues guitar ',
+			tags:"swing, jazz, blues",
+			rating: 0,
+			numOfRatings: 0,
+			submitted: new Date(now - 7 * 3600 * 1000),
+			flaged: false,
+			flagType: {
+				notLesson: 0,
+				badTitle: 0,
+				badTags: 0
+			}
+		});
+	Videos.insert({
+			_id:"g96eih4FLgI",
+			title:'working with a loop pedal',
+			tags:"loop, pedal, jazz",
+			rating: 0,
+			numOfRatings: 0,
+			submitted: new Date(now - 7 * 3600 * 1000),
+			flaged: false,
+			flagType: {
+				notLesson: 0,
+				badTitle: 0,
+				badTags: 0
+			}
+		});
+
 	for(var i = 0; i< 30; i++) {
 		Videos.insert({
 		_id: 'v' + i,

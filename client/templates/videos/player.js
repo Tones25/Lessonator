@@ -11,8 +11,8 @@ Player = {
       /*    after the API code downloads. */
       window.onYouTubeIframeAPIReady = function() {
         window.player = new YT.Player('player', {
-          height: '390',
-          width: '640',
+          height: '507',
+          width: '832',
           videoId: Session.get('ytId'),
           events: {
             'onReady': onPlayerReady,

@@ -4,8 +4,8 @@
 
 if ($('#nextRoute')){
     $(window).scroll(function(){
-        if ($(window).scrollTop() + $(window).height() >= ($(document).height()-80) && ($('#nextRoute').val() != "")) {
-            console.log(window.scrollY);
+        if ($(window).scrollTop() + $(window).height() >= ($(document).height()-80) && ($('#nextRoute').val() != null)) {
+            console.log("Load new @ scroll: "+window.scrollY);
             Router.go($('#nextRoute').val());
         }
     });

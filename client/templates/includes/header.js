@@ -14,6 +14,7 @@ Template.header.events({
 
 function search(){
 	var userSearch = $("#userSearch").val();
+	$('#userSearch').addClass('loading');
 	if(userSearch != ""){
 		Session.set('userSearch', userSearch);
 		Router.go('videoList', {});
