@@ -1,7 +1,9 @@
 <template name="modPage">
 	<h1>Mod Page</h1>
 	<div class="videos">
-        {{message}}
+        {{#if noResult}}
+            <span><h3>There are no reported videos yet.</h3></span>
+        {{/if}}
 		{{#each videos}}
 			{{>reportItem}}
 		{{/each}}

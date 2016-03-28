@@ -1,9 +1,9 @@
 Template.modPage.helpers({
-    message: function(){
-        if(videos.find().count() > 0){
-            return "there are vids";
+    noResult: function(){
+        if(Videos.find().count() > 0){
+            return false;
         }else{
-            return "there are not vids";
+            return true;
         }
     }
 });
