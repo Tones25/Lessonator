@@ -1,9 +1,9 @@
 Template.modPage.helpers({
     message: function(){
-        if(videos.find().count() > 0){
-            return "there are vids";
+        if(Videos.find().count() > 0){
+            return "Here's some content that needs fixing:";
         }else{
-            return "there are not vids";
+            return "No flagged content at the moment!";
         }
     }
 });
