@@ -82,9 +82,9 @@ function cookUpSuggestedQuery(user) {
   	let suggestedTags = [];
 	  if (userTags.length > 10) {
 	    let tempArray = userTags.slice(userTags.length - 10, userTags.length);
-	    suggestedTags = _.sample(tempArray, 3);
+	    suggestedTags = _.sample(tempArray, 5);
 	  } else if (userTags.length >3 && userTags.length < 10) {
-	    suggestedTags = _.sample(userTags, 3);
+	    suggestedTags = _.sample(userTags, 5);
 	  } else {
 	    suggestedTags = userTags;
 	  }
@@ -131,3 +131,5 @@ Template.suggestedSlide3.helpers({
 	 		});
 	 },
 	});
+
+
