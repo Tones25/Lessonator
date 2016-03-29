@@ -1,17 +1,31 @@
 <template name="commentView">
-    <div class="ui segment">
-        <p>{{ username }}</p>
+<div class="ui segment">
+    <div class="ui grid">
+    <div class="two wide column">
+        <div class="ui center aligned container">
+            <button id="upVote" class="ui icon button">
+                <i class="angle up icon"></i>
+            </button>
+            <p>{{rating}}</p>
+            <button id="downVote" class="ui icon button">
+                <i class="angle down icon"></i>
+            </button>
+            </div>
+            {{#if isRated}}
+                <p>Thanks for rating!</p>
+            {{/if}}
+    </div>
+    <div class="fourteen wide column">
+        <h4>{{ username }}</h4>
         <p id="commentText">{{ commentText }}</p>
         {{#if isOwner}}
             <button id="delete">delete</button>
         {{/if}}
         {{#if currentUser}}
-            <button id="upVote">up vote</button>
-            <button id="downVote">down vote</button>
-            <p>Rating: {{rating}}</p>
-            {{#if isRated}}
-                <p>Thanks for rating!</p>
-            {{/if}}
+        
         {{/if}}
     </div>
+    </div>
+    </div>
 </template>
+
