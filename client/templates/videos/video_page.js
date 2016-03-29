@@ -35,7 +35,11 @@ Template.videoPage.helpers({
 		return Comments.find().count();
 	},
 	Comments: function(){
-		return Comments.find({},{sort:{dateTime: -1}}).fetch();
+		if(Session.get('commentSort') === 'topRated') {
+			return Comments.find({},{sort:{rating: -1}}).fetch();
+		} else {
+			return Comments.find({},{sort:{dateTime: -1}}).fetch();
+	}
 	}
 });
 
@@ -83,5 +87,10 @@ Template.videoPage.events({
 			username: Meteor.user().username,
 			video: Session.get('ytId')
 		});
+	},
+	'change #commentSort': function(e) {
+		let newVal = $(e.target).val();
+		Session.set('commentSort', newVal);
+		console.log(newVal);
 	}
 });
