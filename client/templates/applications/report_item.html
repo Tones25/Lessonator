@@ -1,10 +1,18 @@
 <template name="reportItem">
-	<div class="entry">
+	<div class="ui segment">
+	<div class="ui grid">
+	<div class="fourteen wide column">
 		<h3><a href="{{pathFor 'videoPage'}}" id="link">{{title}}</a></h3>
 		{{> starsRating rating=rating size=20}}
-        <p>Rated {{numOfRatings}} times</p>
+        <p>Ratings: {{numOfRatings}}</p>
         <p>Submitted {{submitted}}</p>
-        <p>{{getFlags}}</p>
-
+        </div>
+        <div class="two wide column">
+        <h3>Reports:</h3>
+        <h4>Not a lesson: {{getNotLessonReports}}
+        <br>Bad title: {{getBadTitleReports}}
+        <br>Bad tags: {{getBadTagsReports}}</h4>
+        </div>
+</div>
 	</div>
 </template>
