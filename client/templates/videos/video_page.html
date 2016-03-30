@@ -37,19 +37,20 @@
         {{else}}
             <h4 class="inline">You must be logged in to rate or comment videos</h4>
         {{/if}}
-        <div class="commentSection">
-            <br>
-            <div class="ui dividing header">
-                <h4 class="inline">Sort comments by: </h4>
-                <select class="inline" id="commentSort">
-                    <option value="newest">Newest</option>
-                    <option value="topRated">Top Rated</option>
-                </select>
+        {{#if Comments}}
+            <div class="commentSection">
+                <br>
+                <div class="ui dividing header">
+                    <h4 class="inline">Sort comments by: </h4>
+                    <select class="inline" id="commentSort">
+                        <option value="newest">Newest</option>
+                        <option value="topRated">Top Rated</option>
+                    </select>
+                </div>
+                {{#each Comments}}
+                    {{> commentView}}
+                {{/each}}
             </div>
-
-            {{#each Comments}}
-                {{> commentView}}
-            {{/each}}
-        </div>
+        {{/if}}
     </div>
 </template>

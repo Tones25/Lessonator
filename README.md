@@ -31,3 +31,14 @@ Ant                              1             12             54              5
 
 SUM:                            39            557            692           5337
 ```
+#### CLOC for meteor lessonator:
+```
+Language                     files          blank        comment           code
+
+JavaScript                      28            118             54           1266
+HTML                            29             54             28            581
+CSS                              2             21              5            414
+LESS                             1             80             65            275
+
+SUM:                            60            273            152           2536
+```
