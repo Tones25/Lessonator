@@ -4,9 +4,9 @@
     <a href="{{pathFor 'videoPage'}}">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="http://img.youtube.com/vi/{{_id}}/0.jpg">
+      <img class="thumbnail-img" src="http://img.youtube.com/vi/{{_id}}/0.jpg" onError="this.onerror=null;this.src='/img/NF.png';">
       <div class="caption">
-        <h3><a href="{{pathFor 'videoPage'}}" id="thumbnailLink"><hl>{{title}}</hl></a></h3>
+        <h3><hl>{{title}}</hl></h3>
         <h6><hl>Video Tags</hl></h6>
         <p><hl>{{tags}}</hl></p>
         {{> starsRating rating=rating size=20}}

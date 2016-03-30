@@ -15,15 +15,15 @@ textarea, input, button { outline: none; }
 
 .thumbnail{
     background-color: #333333;
-    overflow-y: hidden;
-    max-height: 272px;
+    width: 350px;
+    height: 265px;
 }
 
 .caption{
     position: absolute;
     top: 0;
     color: aliceblue !important;
-    max-width: 90%;
+    max-width: 95%;
 }
 
 hl{
