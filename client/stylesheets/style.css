@@ -123,3 +123,7 @@ hl{
 .green{
     background-color: RGBA(126, 208, 158, 1.00) !important;
 }
+
+.alert{
+    z-index: 200;
+}
