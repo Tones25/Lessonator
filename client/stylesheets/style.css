@@ -65,3 +65,47 @@ hl{
 .carousel-control.left{
     background-image: none !important;
 }
+
+.center{
+    margin: 0 auto;
+    display: block;
+}
+
+.player-wrapper{
+    position: absolute;
+    background-color: RGBA(52, 52, 54, 1.00);
+    width: 100%;
+    left: 0;
+    top: 45px;
+}
+
+.video-info{
+    padding-top: 495px;
+}
+
+.comInput{
+    background-color: aliceblue;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+#commentSubmit{
+    background: rgba(33,175,89,0.58);
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 15px;
+    color: #fff;
+    position: relative;
+}
+
+#commentSubmit:hover{
+    background: rgba(44, 165, 71, 0.58);
+}
+
+.flex{
+    display: flex;
+}
+
+.pad-r-20{
+    padding-right: 20px;
+}
