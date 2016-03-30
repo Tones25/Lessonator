@@ -12,6 +12,7 @@ Template.report.events({
 	        		throwError('Report submited');
 	        	}
         });
-        $('#reportModal').modal('hide');
+        
+        
 	}
 });

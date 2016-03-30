@@ -27,10 +27,12 @@ Template.modTools.events({
 					throwError('Changes saved');
 				} else {
 					throwError('Video deleted');
+					$('#modModal').modal('hide');
+		$('.modal-backdrop').remove();
 					Router.go('modPage');
 				}
 			}
 		});
-		$('#modModal').modal('hide');
+
 	}
 });
