@@ -1,5 +1,8 @@
 Errors = new Mongo.Collection(null);
 
 throwError = function(message) {
-	Errors.insert({message: message});
+	this.err = Errors.insert({message: message});
+	window.setTimeout(function(){
+		Errors.remove(this.err);
+	},3000);
 };
