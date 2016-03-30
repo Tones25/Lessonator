@@ -1,5 +1,5 @@
 Template.report.events({
-	'submit form': function(e) {
+	'click #reportSubmit': function(e) {
 		e.preventDefault();
 
 		let flagType = $("div.reportTypes select").val();
