@@ -71,6 +71,7 @@ hl{
 .center{
     margin: 0 auto;
     display: block;
+    text-align: center;
 }
 
 .player-wrapper{
@@ -113,6 +114,10 @@ hl{
 }
 .pad-l-20{
     padding-left: 20px;
+}
+
+.pad-l-40{
+    padding-left: 40px;
 }
 
 .green{

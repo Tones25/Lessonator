@@ -1,22 +1,30 @@
 <template name="commentView">
 <div class="ui segment">
     <div class="ui grid inline">
-        <div class="ui three wide column">
-            <div class="pad-l-20">
-                <div class="inline">
-                    <button id="upVote" class="ui icon green button">
-                        <i class="angle up icon"></i>
-                    </button>
-                </div>
-                <div class="inline">
-                    <p>{{rating}}</p>
-                </div>
-                <div class="inline">
-                    <button id="downVote" class="ui icon blue button">
-                        <i class="angle down icon"></i>
-                    </button>
-                </div>
-            </div>
+        <div class="ui three wide column center">
+{{#if isRated}}
+    <div class="pad-l-20">
+        <div class="center">
+            <p>{{rating}}</p>
+        </div>
+    </div>
+    {{else}}
+    <div class="pad-l-20">
+        <div class="inline">
+            <button id="upVote" class="ui icon green button">
+                <i class="angle up icon"></i>
+            </button>
+        </div>
+        <div class="inline">
+            <p>{{rating}}</p>
+        </div>
+        <div class="inline">
+            <button id="downVote" class="ui icon blue button">
+                <i class="angle down icon"></i>
+            </button>
+        </div>
+    </div>
+    {{/if}}
         </div>
         <div class="thirteen wide column">
             <h4 class="inline">@{{ username }}:&nbsp;&nbsp;</h4>

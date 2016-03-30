@@ -17,8 +17,9 @@ Template.modTools.events({
 		let newTitle = $('#title').val();
 		let newTags = $('#tags').val();
 		let isDelete = ($('#delete').is(':checked')) ? true : false;
-		console.log(newTitle + ' ' + newTags + ' ' + isDelete);
+		//console.log(newTitle + ' ' + newTags + ' ' + isDelete);
 		//this method is in server/methods
+		$('#modModal').modal('hide');
 		Meteor.call('modEdit', video._id, newTitle, newTags, isDelete, function(error, result) {
 			if(error) {
 				throwError(error.reason);
@@ -28,7 +29,6 @@ Template.modTools.events({
 				} else {
 
 					throwError('Video deleted');
-					$('#modModal').modal('hide');
 					Router.go('modPage');
 				}
 			}
