@@ -55,7 +55,7 @@
 //////////////////// LOGIN BUTTONS
 
 @login-buttons-accounts-dialog-width: 250px;
-@login-buttons-color: #596595;
+@login-buttons-color: RGBA(61, 154, 199, 1.00);
 @login-buttons-color-border: darken(@login-buttons-color, 10%);
 @login-buttons-color-active: lighten(@login-buttons-color, 10%);
 @login-buttons-color-active-border: darken(@login-buttons-color-active, 10%);
@@ -240,7 +240,7 @@
 .accounts-dialog {
   border: @meteor-accounts-dialog-border-width solid #ccc;
   z-index: 1000;
-  background: white;
+  background: black;
   border-radius: 4px;
 
   padding: 8px 12px;
@@ -253,7 +253,7 @@
   // Labels and links inherit app's font with this line commented out:
   //font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #333;
+  color: white;
 
   // XXX Make the dropdown and dialogs look good without a top-level
   // line-height: 1.6.  For now, we apply it to everything except
@@ -278,6 +278,7 @@
   }
 
   input[type=text], input[type=email], input[type=password] {
+    color: #333;
     // Be pixel-accurate in IE 8+ regardless of our borders and
     // paddings, at the expense of IE 7.
     // Any heights or widths applied to this element will set the
