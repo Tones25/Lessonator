@@ -23,7 +23,7 @@ Template.commentView.events({
     },
     'click #upVote': function() {
         if(!Meteor.user()) {
-            throwError('Must be logged in to comment!');
+            throwError('Must be logged in to rate comment!');
             return;
         }
         let comment = Comments.findOne({_id: this._id});
@@ -42,7 +42,7 @@ Template.commentView.events({
     },
     'click #downVote': function() {
         if(!Meteor.user()) {
-            throwError('Must be logged in to comment!');
+            throwError('Must be logged in to rate comment!');
             return;
         }
         let comment = Comments.findOne({_id: this._id});
