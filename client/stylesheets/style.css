@@ -1,5 +1,9 @@
 textarea, input, button { outline: none; }
 
+body{
+    background-color: #edf4ff;
+}
+
 .modal-backdrop{
     z-index: 2 !important;
 }
