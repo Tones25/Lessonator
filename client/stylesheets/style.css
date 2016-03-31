@@ -23,7 +23,7 @@ textarea, input, button { outline: none; }
     position: absolute;
     top: 0;
     color: aliceblue !important;
-    max-width: 95%;
+    /*max-width: 95%;*/
 }
 
 hl{
