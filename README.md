@@ -1,20 +1,7 @@
 # Lessonator
 To Do's
--have home page be suggested videos based off previously viewed or popularity/score. use same suggestions in main video view as well
 
--add app specific view count per vid
 
--make look purdy
-    - video page to be done today
-
--submit videos (working partial)
-    -need to fix insert allowance in video.js
-
--homepage
-	-if logged in show suggested videos
-
--add 'moderator' accounts that can delete flagged videos
-    -cant access the videos collection to give a status message, I must be missing something on the config for that page
 
 
 #### CLOC for java lessonator:

@@ -26,9 +26,12 @@ Template.modTools.events({
 				if(!isDelete) {
 					throwError('Changes saved');
 				} else {
+					//have to manually remove modal and overlay
+					//before routing to next page,
+					//otherwise overlay sticks around
 					throwError('Video deleted');
 					$('#modModal').modal('hide');
-		$('.modal-backdrop').remove();
+					$('.modal-backdrop').remove();
 					Router.go('modPage');
 				}
 			}

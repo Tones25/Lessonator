@@ -41,7 +41,11 @@ Template.adminPage.events({
 		var username = $('#usrUsername').val();
 		var password = $('#usrPassword').val();
 		console.log(username + ' ' + password);
-		Meteor.call('createRegUser', username, password, function(error, result) {});
+		Meteor.call('createRegUser', username, password, function(error, result) {
+			if(result) {
+				throwError(result);
+			}
+		});
 		template.find('#usrInputs').reset();
 		$('#usrInputs').addClass('hidden');
 		$('#newUsrBttn').removeClass('hidden');

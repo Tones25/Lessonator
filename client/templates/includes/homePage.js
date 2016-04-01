@@ -14,6 +14,11 @@ Template.homePage.helpers({
 	}
 });
 
+//this function is the same as the one in carouselHelpers
+//Its being reused to check if there is enough tags in the
+//user store to generate enough suggested content to fill
+//the carousel. If there isn't enough content, the carousel
+//isn't rendered
 function cookUpSuggestedQuery(user) {
 	let userTags = user.tagStoreForVideoSuggestion;
   	let suggestedTags = [];

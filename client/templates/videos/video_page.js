@@ -44,6 +44,9 @@ Template.videoPage.helpers({
 });
 
 Template.videoPage.events({
+	//updates rating of video and add video id to user
+	//array of rated content to prevent multiple ratings
+	//of the same video
 	'click #rating': function(e) {
 		let userRating = $('#rating').data('userrating');
 		let currentVidId = Session.get('ytId');
@@ -71,13 +74,7 @@ Template.videoPage.events({
 	'click #commentSubmit': function(e){
 		let comment = $('#commentText').val();
 		let dt = new Date();
-		// just to check that we are getting server time not client
-		console.log({
-			commentText: comment,
-			dateTime: dt+" -- CLIENT",
-			userId: Meteor.userId(),
-			video: Session.get('ytId')
-		});
+		
 		Comments.insert({
 			commentText: comment,
 			dateTime: dt,
@@ -87,6 +84,7 @@ Template.videoPage.events({
 			username: Meteor.user().username,
 			video: Session.get('ytId')
 		});
+		$('#commentText').val("");
 	},
 	'change #commentSort': function(e) {
 		let newVal = $(e.target).val();

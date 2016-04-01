@@ -1,3 +1,9 @@
+Meteor.users.allow({
+	update: function(usr, doc) {
+		return !!usr;
+	}
+})
+//creates admin account on first time app is run
 if(Meteor.users.find().count() === 0) {
 	 let id = Accounts.createUser({
 		password: 'admin',
@@ -16,9 +22,6 @@ Accounts.onCreateUser(function(options, user) {
 	}
 	return user;
 });
-
-//gigantic security hole but it'll do for now
-// fixed
 
 
 Meteor.methods({
@@ -42,6 +45,7 @@ Meteor.methods({
 		check(password, String);
 		if (Meteor.users.findOne({username: username})) {
 			console.log('username already exists');
+			return 'User already exists';
 		} else {
 
 			let id = Accounts.createUser({

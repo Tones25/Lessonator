@@ -24,8 +24,7 @@ Meteor.publish('videosBySuggested', function(query, limit) {
   var suggestedCursor =   Videos.find(
     { $text: {$search: query} },
     {
-      // `fields` is where we can add MongoDB projections. Here we're causing
-      // each document published to include a property named `score`, which
+      // each published document includes a `score`, which
       // contains the document's search rank, a numerical value, with more
       // relevant documents having a higher score.
       fields: {
@@ -58,7 +57,7 @@ Meteor.publish('vidComments', function (id){
 });
 
 Meteor.publish('search', function(userSearch, limit) {
-  // If `searchValue` is not provided, we publish all known Videos. If it is
+// If `searchValue` is not provided, we publish all known Videos. If it is
 // provided, we publish only Videos that match the given search value.
   if (!userSearch) {
     userSearch = '';
@@ -73,8 +72,7 @@ Meteor.publish('search', function(userSearch, limit) {
   return  Videos.find(
     { $text: {$search: userSearch} },
     {
-      // `fields` is where we can add MongoDB projections. Here we're causing
-      // each document published to include a property named `score`, which
+      // each published document includes a `score`, which
       // contains the document's search rank, a numerical value, with more
       // relevant documents having a higher score.
       fields: {
