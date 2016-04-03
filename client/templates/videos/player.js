@@ -31,6 +31,7 @@ Player = {
 //This updates suggested tags on video end
       function onPlayerStateChange(event){
         if(event.data === 0) {
+          //method is in videos.js
           Meteor.call('updateSuggestedTags', Meteor.user(),
             Session.get('ytId'), function(error, result) {
             if(error) {
